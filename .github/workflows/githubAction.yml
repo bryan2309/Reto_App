@@ -14,7 +14,7 @@ jobs:
         uses: behe/heroku-build@v1
         with:
           app-name: "retoapp"
-          api-key: "${{secrets.HEROKU_API_KEY}}"
+          api-key: "${{secrets.HEROKU_KEY}}"
           
          
          
