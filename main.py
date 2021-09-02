@@ -29,7 +29,7 @@ def index():
 	ethereum=cadenaEthereum.find('span',class_='Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)').text.strip()
 	cardano=cadenaCardano.find('span',class_='Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)').text.strip()
 	binancecoin=cadenaCardano.find('span',class_='Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)').text.strip()
-	return 'Valores de BITCOIN $' + ' ' +bitcoin + 'Valores de ETHEREUM $'+ethereum+'Valores de CARDANO Tesla $'+cardano+'Valores de BINANCE COIN $'+binancecoin+''
+	return 'Valores de BITCOIN $' + ' ' +bitcoin + ' Valores de ETHEREUM $'+ ' ' +ethereum+' Valores de CARDANO Tesla $'+ ' ' +cardano+' Valores de BINANCE COIN $'+ ' ' +binancecoin+''
 	
 
 if __name__ == '__main__':
