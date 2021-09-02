@@ -3,8 +3,8 @@ from flask import Flask
 from bs4 import BeautifulSoup
  
 app = Flask(__name__)
-PORT = 5000
-DEBUG = False
+PORT = 8000
+DEBUG = True
 
 @app.errorhandler(404)
 def not_found(error):
@@ -17,14 +17,14 @@ def index():
 	crytoEthereum ='https://finance.yahoo.com/quote/ETH-USD?p=ETH-USD'
 	crytoCardano='https://finance.yahoo.com/quote/ADA-USD?p=ADA-USD'
 	crytoBinanceCoin='https://finance.yahoo.com/quote/BNB-USD?p=BNB-USD'
-		respuestaBitcoin=requests.get(crytoBitcoin,headers=headers)
-		respuestaEthereum=requests.get(crytoEthereum,headers=headers)
-		respuestaCardano=requests.get(crytoCardano,headers=headers)
-		respuestaBinanceCoin=requests.get(crytoBinanceCoin,headers=headers)
-			cadenaBitcoint=BeautifulSoup(respuestaBitcoin.text,'lxml')
-			cadenaEthereum=BeautifulSoup(respuestaEthereum.text,'lxml')
-			cadenaCardano=BeautifulSoup(respuestaCardano.text,'lxml')
-			cadenabinancecoin=BeautifulSoup(respuestaBinanceCoin.text,'lxml')
+	respuestaBitcoin=requests.get(crytoBitcoin,headers=headers)
+	respuestaEthereum=requests.get(crytoEthereum,headers=headers)
+	respuestaCardano=requests.get(crytoCardano,headers=headers)
+	respuestaBinanceCoin=requests.get(crytoBinanceCoin,headers=headers)
+	cadenaBitcoint=BeautifulSoup(respuestaBitcoin.text,'lxml')
+	cadenaEthereum=BeautifulSoup(respuestaEthereum.text,'lxml')
+	cadenaCardano=BeautifulSoup(respuestaCardano.text,'lxml')
+	cadenabinancecoin=BeautifulSoup(respuestaBinanceCoin.text,'lxml')
 	bitcoin=cadenaBitcoint.find('span',class_='Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)').text.strip()
 	ethereum=cadenaEthereum.find('span',class_='Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)').text.strip()
 	cardano=cadenaCardano.find('span',class_='Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)').text.strip()
