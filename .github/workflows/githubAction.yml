@@ -17,11 +17,4 @@ jobs:
         #continue-on-error: true
         with:
           app-name: "retoapp"
-          api-key: "${{secrets.HEROKU_KEY}}"
-          
-          
-        
-        
-          
-         
-         
+          api-key: "${{secrets.HEROKU_API_KEY}}"
